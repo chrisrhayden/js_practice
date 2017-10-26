@@ -34,7 +34,7 @@ const fakeApi = async () => {
       if (err) reject(new Error('cant get img, idk why', err))
 
       // when the buffer is finished convert to str and return/resolve
-      resolve(`data:image/jpeg;base64,${buffer.toString('base64')}`)
+      resolve(`data:image/png;base64,${buffer.toString('base64')}`)
     })
   })
 
