@@ -1,6 +1,7 @@
 const faker = require('faker')
 const bluIMd5 = require('blueimp-md5')
 const fetch = require('node-fetch')
+const avGen = require('avatar-generator')
 
 let apiCallCounter = 0
 
@@ -48,9 +49,9 @@ const callApi = async () => {
 let myURL = 'https://firstproj-9f9e1.firebaseio.com/thing.json'
 
 fetch(myURL, {method: 'DELETE'})
+  .then(() => {
+    const allApiCalls = Array(100).fill(callApi).map((call) => call())
 
-const allApiCalls = Array(100).fill(callApi())
-
-console.log(allApiCalls)
-
-// Promise.all(allApiCalls).then(console.log).catch(console.log)
+    Promise.all(allApiCalls)
+      .then(console.log).catch(console.log)
+  })
