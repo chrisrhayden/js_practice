@@ -13,6 +13,8 @@ const getGender = (rate) => {
   else return 'female'
 }
 
+const hh = 'the'
+
 const fakeApi = async () => {
   // <---------- faker calls
   const firstName = faker.name.firstName()
@@ -84,7 +86,7 @@ const makeAllApiCalls = async () => {
   Promise.all(allApiCalls)
     .then(console.log)
     .catch(console.log)
-  console.log('api call counter >>', apiCallCounter)
+  console.log('apis call counter >>', apiCallCounter)
 }
 
 makeAllApiCalls()
