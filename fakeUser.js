@@ -13,8 +13,6 @@ const getGender = (rate) => {
   else return 'female'
 }
 
-const hh = 'the'
-
 const fakeApi = async () => {
   // <---------- faker calls
   const firstName = faker.name.firstName()
@@ -97,6 +95,7 @@ return new Promise((resolve, reject) => {
   resolve(output)
   reject(new Error('idk what happend'))
 })
+
 fetch(myURL, {method: 'DELETE'})
   .then(() => {
     // make and array with uncalled functions then map and call inside
