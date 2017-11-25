@@ -29,20 +29,20 @@ const fakeApi = async () => {
   // ---------->
 
   // promise a str of image bytes or whatever
-  const getAvatar = new Promise((resolve, reject) => {
-    avGen(firstName, gender, 400).toBuffer((err, buffer) => {
-      if (err) reject(new Error('cant get img, idk why', err))
+  //const getAvatar = new Promise((resolve, reject) => {
+  //  avGen(firstName, gender, 40).toBuffer((err, buffer) => {
+  //    if (err) reject(new Error('cant get img, idk why', err))
 
-      // when the buffer is finished convert to str and return/resolve
-      resolve(`data:image/png;base64,${buffer.toString('base64')}`)
-    })
-  })
+  //    // when the buffer is finished convert to str and return/resolve
+  //    resolve(`data:image/png;base64,${buffer.toString('base64')}`)
+  //  })
+  //})
 
+    //avatar,
   // wait for the getAvatar promise to resolve then assign to avatar
-  const avatar = await getAvatar.then(resp => resp).catch(console.log)
+  //const avatar = await getAvatar.then(resp => resp).catch(console.log)
   const myApiInfo = {
     apiCallCounter: apiCallCounter++,
-    avatar,
     firstName,
     lastName,
     gender,
