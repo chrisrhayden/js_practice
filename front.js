@@ -6,7 +6,7 @@ const front = (word) => {
 }
 
 
-let test_list = ['JavJavJav', 'ChoChoCho', 'abcabcabc']
+let test_list = ['Jav', 'Cho', 'abc']
 
 for (let test of test_list) {
   front(test)
