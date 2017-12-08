@@ -1,5 +1,8 @@
-const rot = (theStr, rotNum) => {
+const rot = (unclean, rotNum) => {
   const letterStr = 'abcdefghijklmnopqrstuvwxyz'
+
+  const patt = /[.,/?\\[]{}()/
+  const theStr = unclean.replace(patt, '')
 
   let newStr = ''
   for (let letter of theStr) {
